@@ -1,0 +1,248 @@
+/** @format */
+
+:root {
+  --color-buttonandtext: hsl(183, 100%, 15%);
+  --color-reset: hsl(172, 67%, 45%);
+  --color-label: hsl(186, 14%, 43%);
+  --color-neutral: hsl(0, 0%, 100%);
+  --color-input: hsl(189, 41%, 97%);
+  --color-mainbg: hsl(185, 41%, 84%);
+  --color-primary: hsl(184, 14%, 56%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Space Mono', monospace;
+  color: var(--color-label);
+}
+
+h4 {
+  margin: 0.5rem 0;
+}
+
+h2 {
+  color: var(--color-reset);
+  font-size: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+
+  cursor: pointer;
+}
+
+.tip__button {
+  background-color: var(--color-buttonandtext);
+  color: var(--color-neutral);
+}
+
+.tip__button--custom {
+  background-color: var(--color-input);
+  color: var(--color-label);
+  text-transform: capitalize;
+}
+
+.reset--button {
+  background-color: var(--color-reset);
+  color: var(--color-buttonandtext);
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.input__container {
+  position: relative;
+  padding: 1rem auto;
+
+  width: 100%;
+}
+
+.input__container img {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.5rem;
+  transition: all 0.5s;
+}
+
+.input__container p {
+  position: absolute;
+  top: -1.2rem;
+  right: 0;
+  color: red;
+  font-weight: 600;
+}
+.input__container--custom {
+  font-family: 'Space Mono', monospace;
+
+  width: 100%;
+  border: none;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--color-input);
+  color: var(--color-buttonandtext);
+  font-weight: 600;
+  text-align: right;
+}
+
+.input__container--custom::placeholder {
+  color: var(--color-label);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.input__container--custom:focus {
+  border: 1.5px solid var(--color-reset);
+  border-radius: 5px;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  top: -1rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--color-input);
+  color: var(--color-buttonandtext);
+  font-weight: 600;
+  font-family: 'Space Mono', monospace;
+  transition: all 0.1s;
+  text-align: right;
+}
+
+.input:focus {
+  border: 1.5px solid var(--color-reset);
+  border-radius: 5px;
+}
+
+main {
+  width: 60%;
+  padding: 1.5rem 2rem;
+  background-color: var(--color-neutral);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 5rem;
+}
+
+section {
+  background-color: var(--color-mainbg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.side--1 {
+  /* width: 50%; */
+  display: grid;
+  grid-template-columns: auto;
+  gap: 2.5rem;
+  padding: 1rem 0;
+  height: 100%;
+}
+
+.side--2 {
+  /* width: 50%; */
+  background-color: var(--color-buttonandtext);
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.output {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+
+.output--tip {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.output--tip span {
+  display: block;
+  color: var(--color-primary);
+  font-size: 0.6rem;
+}
+
+.output--tip p {
+  font-size: 0.8rem;
+  color: var(--color-neutral);
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    height: 100%;
+    padding: 1rem 0;
+  }
+  main {
+    width: 90%;
+    padding: 1.5rem 1rem;
+    grid-template-columns: auto;
+  }
+  .tips {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .side--2 {
+    /* width: 50%; */
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    width: 60%;
+  }
+}
