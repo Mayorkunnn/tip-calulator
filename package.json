@@ -11,5 +11,8 @@
   },
   "scripts": {
     "build": "webpack"
+  },
+  "dependencies": {
+    "vercel": "^32.1.0"
   }
 }

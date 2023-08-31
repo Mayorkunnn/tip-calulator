@@ -1,4 +1,16 @@
 import './style.css';
+// Import image files using ES6 import syntax
+import logoImage from './images/logo.svg';
+import dollarIconImage from './images/icon-dollar.svg';
+import personIconImage from './images/icon-person.svg';
+
+// Use the imported images as needed
+document.getElementById('logo').src = logoImage;
+document.getElementById('dollar-icon').src = dollarIconImage;
+document.getElementById('person-icon').src = personIconImage;
+
+// ... rest of your JavaScript code ...
+
 // Rest of your script
 
 class TipCalculator {
