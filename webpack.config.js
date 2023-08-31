@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
   entry: './script.js', // Adjust the entry point to your script.js
   output: {
     filename: 'bundle.js',
