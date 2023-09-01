@@ -1,6 +1,6 @@
 import './style.css';
 // Import image files using ES6 import syntax
-const favicon = document.querySelector('.material[rel="icon"]');
+const favicon = document.querySelector('link[rel="icon"]');
 
 // Set the href attribute to the path of your SVG icon
 import logoImage from './images/logo.svg';
