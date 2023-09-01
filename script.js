@@ -9,8 +9,6 @@ document.getElementById('logo').src = logoImage;
 document.getElementById('dollar-icon').src = dollarIconImage;
 document.getElementById('person-icon').src = personIconImage;
 
-// ... rest of your JavaScript code ...
-
 // Rest of your script
 
 class TipCalculator {
@@ -25,7 +23,7 @@ class TipCalculator {
     this.inputs = document.querySelectorAll('.input');
     this.tipContainer = document.querySelector('.tips');
     this.resetButton = document.querySelector('.reset--button');
-
+    this.calculateButton = document.querySelector('.calculate');
     this.init();
     this.hideErrorMessage();
     this.attachEventListeners();
@@ -108,6 +106,23 @@ class TipCalculator {
         const clicked = e.target;
         clicked.nextElementSibling.style.opacity = 0;
       });
+    });
+
+    this.calculateButton.addEventListener('click', () => {
+      const billValue = parseFloat(this.billInput.value);
+      const personValue = parseInt(this.personInput.value);
+
+      if (isNaN(billValue) || billValue < 1) {
+        this.showErrorMessage(this.billInput);
+        return;
+      }
+
+      if (isNaN(personValue) || personValue < 1) {
+        this.showErrorMessage(this.personInput);
+        return;
+      }
+
+      this.displayResults();
     });
 
     document.addEventListener('keypress', e => {

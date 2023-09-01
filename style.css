@@ -66,6 +66,14 @@ h2 {
   margin-top: 2rem;
 }
 
+.calculate {
+  background-color: var(--color-reset);
+  color: var(--color-buttonandtext);
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 2rem;
+}
+
 .input__container {
   position: relative;
   padding: 1rem auto;
