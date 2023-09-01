@@ -11,7 +11,8 @@ import personIconImage from './images/icon-person.svg';
 document.getElementById('logo').src = logoImage;
 document.getElementById('dollar-icon').src = dollarIconImage;
 document.getElementById('person-icon').src = personIconImage;
-favicon.href = './images/logo.svg';
+
+favicon.href = logoImage;
 
 // Rest of your script
 
