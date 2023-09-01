@@ -3,7 +3,6 @@ import './style.css';
 const favicon = document.querySelector('.material[rel="icon"]');
 
 // Set the href attribute to the path of your SVG icon
-favicon.href = './images/logo.svg';
 import logoImage from './images/logo.svg';
 import dollarIconImage from './images/icon-dollar.svg';
 import personIconImage from './images/icon-person.svg';
@@ -12,6 +11,7 @@ import personIconImage from './images/icon-person.svg';
 document.getElementById('logo').src = logoImage;
 document.getElementById('dollar-icon').src = dollarIconImage;
 document.getElementById('person-icon').src = personIconImage;
+favicon.href = './images/logo.svg';
 
 // Rest of your script
 
