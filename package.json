@@ -25,5 +25,11 @@
   },
   "dependencies": {
     "vercel": "^32.1.0"
-  }
+  },
+  "name": "tip-calculator-app",
+  "description": "![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "main": "script.js",
+  "author": "",
+  "license": "ISC"
 }
