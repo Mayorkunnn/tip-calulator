@@ -11,6 +11,14 @@
     "webpack-dev-server": "^4.15.1"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "default": {
+      "includeNodeModules": true
+    }
+  },
+  "engines": {
+    "node": "10"
+  },
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
