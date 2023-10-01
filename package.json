@@ -13,6 +13,7 @@
     "build": "webpack"
   },
   "dependencies": {
-    "vercel": "^32.1.0"
+    "vercel": "^32.1.0",
+    "parcel": "^2.0.0"
   }
 }

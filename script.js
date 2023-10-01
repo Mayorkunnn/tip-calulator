@@ -1,21 +1,3 @@
-import './style.css';
-// Import image files using ES6 import syntax
-const favicon = document.querySelector('link[rel="icon"]');
-
-// Set the href attribute to the path of your SVG icon
-import logoImage from './images/logo.svg';
-import dollarIconImage from './images/icon-dollar.svg';
-import personIconImage from './images/icon-person.svg';
-
-// Use the imported images as needed
-document.getElementById('logo').src = logoImage;
-document.getElementById('dollar-icon').src = dollarIconImage;
-document.getElementById('person-icon').src = personIconImage;
-
-favicon.href = logoImage;
-
-// Rest of your script
-
 class TipCalculator {
   constructor() {
     this.billInput = document.getElementById('input__bill');
